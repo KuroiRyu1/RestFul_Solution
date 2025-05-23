@@ -15,16 +15,20 @@ namespace WebRestCall1.Models.Repositories
         public async Task<List<Category>> GetCates()
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://192.168.150.155:8020/");
-            HttpResponseMessage response = await client.GetAsync("api/categoryapi");
+            client.BaseAddress = new Uri("http://localhost:8020/");
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
+            client.DefaultRequestHeaders.Add("username", "getun");
+            client.DefaultRequestHeaders.Add("pwd", "wuwa");
+            client.DefaultRequestHeaders.Add("tk", "123");
+            HttpResponseMessage res = await client.GetAsync("dm/dms");
             //WebClient client = new WebClient();
             //client.BaseAddress = @"http://192.168.150.155:8020/";
             //client.Headers.Add("Accept", "application/json");
             //HttpResponseMessage response = await client.OpenReadAsync("api/categoryapi");
             List<Category> cates = new List<Category>();
-            if (response.IsSuccessStatusCode == true)
+            if (res.IsSuccessStatusCode == true)
             {
-                var dataJson = response.Content.ReadAsStringAsync().Result;
+                var dataJson = res.Content.ReadAsStringAsync().Result;
                 cates = JsonConvert.DeserializeObject<List<Category>>(dataJson);
             }
             return cates;

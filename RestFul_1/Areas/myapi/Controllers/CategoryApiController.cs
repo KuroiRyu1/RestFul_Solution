@@ -26,20 +26,24 @@ namespace RestFul_1.Areas.myapi.Controllers
             string token = string.Empty;
             if (headerData.Contains("username"))
             {
-                username = headerData.GetValues("username").First();
+                {
+                    username = headerData.GetValues("username").First();
+                }
+                if (headerData.Contains("password"))
+                {
+                    password = headerData.GetValues("pwd").First();
+                }
+                if (headerData.Contains("token"))
+                {
+                    token = headerData.GetValues("tk").First();
+                }
+                if (AccountRep.checkToken(username, password, token) == false)
+                {
+                    CategoryRes res = new CategoryRes();
+                    return res.Gets();
+                }
             }
-            if (headerData.Contains("password"))
-            {
-                password = headerData.GetValues("pwd").First();
-            }
-            if (headerData.Contains("token"))
-            {
-                token = headerData.GetValues("tk").First();
-            }
-            if (AccountRep.checkToken(username,password,token)) {
-                CategoryRes res = new CategoryRes();
-                return res.Gets();
-            }
+            
             return new List<Category>();
         }
 
