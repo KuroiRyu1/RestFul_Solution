@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFul_1", "RestFul_1\RestFul_1.csproj", "{ACA42F5C-F397-4E7D-B9F4-02E9B40F94EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRestCall1", "WebRestCall1\WebRestCall1.csproj", "{6270A2B7-4CDD-4B3D-AAE1-8FA99709641B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACA42F5C-F397-4E7D-B9F4-02E9B40F94EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA42F5C-F397-4E7D-B9F4-02E9B40F94EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA42F5C-F397-4E7D-B9F4-02E9B40F94EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA42F5C-F397-4E7D-B9F4-02E9B40F94EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6270A2B7-4CDD-4B3D-AAE1-8FA99709641B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6270A2B7-4CDD-4B3D-AAE1-8FA99709641B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6270A2B7-4CDD-4B3D-AAE1-8FA99709641B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6270A2B7-4CDD-4B3D-AAE1-8FA99709641B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
